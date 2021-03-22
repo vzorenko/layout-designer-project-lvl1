@@ -1,21 +1,22 @@
 /** CSS STYLE **/
+
 :root {
-    --color-white: #fff;
-    --color-white-transpatence: #d7ccc0;
-    --color-light: #f5f4f0; 
-    --color-main: #fe8a02;
-    --color-main-dark: #fe8a02;
-    --color-dark: #2a2626;
-    --color-dark-transpatence: #908d8b;
-    --color-brown: #b09a81;
-    --color-blue: #1085c5;
+  --color-white: #fff;
+  --color-white-transpatence: #d7ccc0;
+  --color-light: #f5f4f0;
+  --color-main: #fe8a02;
+  --color-main-dark: #fe8a02;
+  --color-dark: #2a2626;
+  --color-dark-transpatence: #908d8b;
+  --color-brown: #b09a81;
+  --color-blue: #1085c5;
 }
 
 body {
-    font-family: "Open Sans";
-    font-size: 16px;
-    line-height: 1.6em;
-    color: var(--color-dark);
+  color: var(--color-dark);
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6em;
 }
 
 h1,
@@ -23,24 +24,26 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: "Neucha";
-    line-height: 1.2em;
+  font-family: "Neucha", sans-serif;
+  line-height: 1.2em;
 }
 
 h1 {
-    font-size: 72px;
+  font-size: 72px;
 }
 
 h2 {
-    font-size: 60px;
+  font-size: 60px;
 }
 
 h3 {
-    font-size: 34px;
+  font-size: 34px;
 }
 
 section {
   width: 1110px;
+
+  margin: 100px 0;
+
   text-align: center;
-    margin: 100px 0;
 }
