@@ -10,7 +10,6 @@
   --color-dark-transpatence: #908d8b;
   --color-brown: #b09a81;
   --color-blue: #1085c5;
-  --image-bg: url(../images/background.png);
 }
 
 @font-face {
@@ -41,11 +40,19 @@ header {
   width: 100%;
 }
 
+main {
+  margin: 0;
+  padding: 0;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5 {
+  margin: 0;
+  padding: 0;
+
   font-family: "Neucha", sans-serif;
   line-height: 1.2em;
 }
@@ -59,16 +66,22 @@ h2 {
 }
 
 h3 {
+  font-size: 52px;
+}
+
+h4 {
   font-size: 34px;
 }
 
 section {
   position: relative;
 
+  box-sizing: border-box;
+
   width: 100%;
 
   margin: 0;
-  padding: 0;
+  padding: 100px 0;
 }
 
 .bg-image::before {
@@ -82,8 +95,11 @@ section {
   z-index: -1000;
 
   width: 100%;
+  height: 100%;
 
-  background-image: url(images/background.png);
+  background: rgb(0, 0, 0);
+
+  background-image: url(../images/background.png);
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -92,12 +108,16 @@ section {
   content: "";
 }
 
+/* Блоки */
+
 .content {
   display: flex;
   flex-wrap: wrap;
 
+  justify-content: space-between;
+
   max-width: 1110px;
-  margin: 100px auto;
+  margin: 0 auto;
 }
 
 .header img {
@@ -120,10 +140,6 @@ section {
   text-align: left;
 }
 
-.color-main {
-  color: var(--color-main);
-}
-
 .columns-2 {
   margin-top: 30px;
 
@@ -131,10 +147,30 @@ section {
   column-gap: 30px;
 }
 
-.columns-2 p {
-  margin-top: 0;
-  break-inside: avoid;
+.upp-200px-container {
+
+  position: relative;
+
+  top: -200px;
+  z-index: -100;
+
+  box-sizing: border-box;
+
+  width: 100%;
+
+  margin: 0;
+  padding-top: 200px;
+  padding-right: 0;
+  padding-left: 0;
 }
+
+.card {
+  flex-basis: 350px;
+  box-sizing: border-box;
+  margin: 15px 0;
+}
+
+/* Элементы */
 
 .button {
   display: inline-block;
@@ -150,4 +186,43 @@ section {
   text-decoration: none;
 
   background-color: var(--color-main);
+}
+
+.video {
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
+}
+
+/* Модификаторы */
+
+.color-main {
+  color: var(--color-main);
+}
+
+.columns-2 p {
+  margin-top: 0;
+  break-inside: avoid;
+}
+
+.center {
+  margin-right: auto;
+  margin-left: auto;
+
+  text-align: center;
+}
+
+.width-100pcr {
+  width: 100%;
+}
+
+.margin-t30 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.bg-color-dark {
+  background: var(--color-dark);
+}
+
+.text-color-white {
+  color: var(--color-white);
 }
