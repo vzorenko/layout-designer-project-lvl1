@@ -16,22 +16,25 @@
 @font-face {
   font-family: Neucha;
   src: url(../fonts/Neucha/Neucha-Regular.ttf);
- }
+}
 
- @font-face {
+@font-face {
   font-family: "Open Sans";
   src: url(../fonts/Open_Sans/OpenSans-Regular.ttf);
- }
-
+}
 
 body {
-  color: var(--color-dark);
-  font-size: 16px;
-  font-family: "Open Sans", sans-serif;
-  line-height: 1.6em;
   width: 100%;
+
   margin: 0;
   padding: 0;
+
+  color: var(--color-dark);
+
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+
+  line-height: 1.6em;
 }
 
 header {
@@ -60,62 +63,90 @@ h3 {
 }
 
 section {
-  width: 100%;
   position: relative;
+
+  width: 100%;
+
   margin: 0;
   padding: 0;
 }
 
 .bg-image::before {
-  content: "";
+  position: absolute;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+
   background-image: url(../images/background.png);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
+
   opacity: 0.1;
+
+  content: "";
 }
 
 .content {
-  max-width: 1110px;
-  margin: 100px auto;
-
   display: flex;
   flex-wrap: wrap;
+
+  max-width: 1110px;
+  margin: 100px auto;
 }
 
 .header img {
   position: relative;
-  height: 525px;
+
   top: 55px;
   right: -270px;
+
   z-index: 200;
+
+  height: 525px;
 }
 
 .header h1 {
-  text-align: left;
-  z-index: 100;
   position: absolute;
+  z-index: 100;
+
   margin: 0;
   padding-top: 100px;
+
+  text-align: left;
 }
-
-
 
 .color-main {
   color: var(--color-main);
 }
 
 .columns-2 {
+  margin-top: 30px;
+
   column-count: 2;
   column-gap: 30px;
-  margin-top: 30px;
 }
 
 .columns-2 p {
   margin-top: 0;
+  break-inside: avoid;
+}
+
+.button {
+  display: inline-block;
+
+  margin-top: 40px;
+  padding: 12px 24px;
+
+  color: var(--color-white);
+
+  font-weight: bold;
+
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: var(--color-main);
 }
