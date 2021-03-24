@@ -190,10 +190,6 @@ section {
   color: var(--color-dark);
 }
 
-#navigation h4 {
-  font-size: 52px;
-}
-
 /* Элементы */
 
 .button {
@@ -212,7 +208,8 @@ section {
   background-color: var(--color-main);
 }
 
-.video {
+.video,
+.shadow {
   filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
 }
 
@@ -224,7 +221,6 @@ section {
 
 .columns-2 p {
   margin-top: 0;
-  break-inside: avoid;
 }
 
 .center {
@@ -251,6 +247,57 @@ section {
   color: var(--color-white);
 }
 
+.text-olor-white-transpatence {
+  color: var(--color-white-transpatence);
+}
+
 .z-index-plus-1000 {
   z-index: 10000;
+}
+
+.break-after-in-column {
+  break-inside: break-after;
+}
+
+.break-before-in-column {
+  break-inside: break-before;
+}
+
+.nobreak-in-column {
+  break-inside: avoid;
+}
+
+.allwidth-in-column {
+  column-span: all;
+}
+
+.height-200px {
+  height: 200px;
+}
+
+#navigation h4 {
+  font-size: 52px;
+}
+
+#ikea-effect h4 {
+  padding: 5px 10px;
+
+  color: var(--color-white);
+
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+
+  text-transform: uppercase;
+
+  background-color: var(--color-brown);
+}
+
+#ikea-effect .pre-header {
+  color: var(--color-dark-transpatence);
+  font-size: 34px;
+  font-family: "Neucha", sans-serif;
+}
+
+#ikea-effect p {
+  padding: 20px 0;
 }
